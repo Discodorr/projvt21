@@ -1,1 +1,174 @@
 /* Denna fil skall innehålla din CSS kod */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.GridWrapper {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    
+    grid-template-areas: 
+    'he he he'
+    'a1 a1 a1'
+    'a2 a3 a3'
+    'a4 a4 a4'
+    ;
+
+    grid-template-columns: repeat(3, 1fr);
+    
+    grid-gap: 1px;
+
+}
+
+.header{
+    grid-area: he;
+    background-color: lightgray;
+    text-align: center;
+    
+}
+.nav {
+    grid-area: he;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: lightgray;
+    font-family: sans-serif;
+    
+    
+    
+}
+.article1 {
+    grid-area: a1;
+
+}
+.article2 {
+    grid-area: a2;
+    
+}
+.article3 {
+    grid-area: a3;
+    
+}
+.article4 {
+    grid-area: a4;
+    
+}
+.burger{
+    
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+    top: 60px;
+}
+h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 50px;
+    margin:auto;
+    padding-top: 5%;
+    
+   
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 0px;
+    height: 70vh;
+    top: -90vh;
+    background-color: lightgray;
+    align-items: center;
+    width: 20%;
+    transition: all 1s;
+}
+.navLinks li{
+    list-style: none;
+}
+.navLinks a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.3s;
+
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px); 
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navActive {
+    transform: translateY(100vh);
+}
+
+@media screen and (max-width:700px) {
+    .navLinks a{
+        letter-spacing: 1px;
+        font-size: 19px;
+    }
+    .navLinks {
+        width: 40%;
+        height: 70vh;
+    }
+}
+nav {
+    Height: 15vh;
+
+
+}
+
+
+@media screen and (min-width:700px) {
+    nav {
+        height: 15vh;
+        
+
+
+    }
+    .burger div{
+        width: 50px;
+        height: 6px;
+        background-color: black;
+        margin: 3px;
+        border-radius: 20%;
+        transition: all 0.3s;
+    }    
+    .navLinks a{
+        color: black;
+        text-decoration: none;
+        letter-spacing: 5px;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .navLinks {
+        width: 30%;
+    }
+
+}
+@media screen and (min-width:1250px) {
+    .navLinks {
+        width: 20%;
+    }
+    .navLinks a{
+        font-size: 25px;
+    }
+}
