@@ -1,4 +1,6 @@
 /* Denna fil skall innehålla din CSS kod */
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,40 +9,80 @@
 .GridWrapper {
     display: grid;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     
     grid-template-areas: 
     'he he he'
     'a1 a1 a1'
     'a2 a3 a3'
     'a4 a4 a4'
+    'fo fo fo'
     ;
 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5vh, auto, auto, 5vh ;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
 
     grid-gap: 1px;
 
 }
 
-.header{
-    grid-area: he;
-    /*height: 50%;*/
-    background-color: lightgray;
-    /*text-align: center;*/
-    
-    
-    
-    
+.article1 {
+    grid-area: a1;
+    background-color: gray;
 }
-.nav {
+
+.article2 {
+    grid-area: a2;
+    background-color: lightslategrey;
+}
+.article3 {
+    grid-area: a3;
+    background-color: gray;
+}
+.article4 {
+    grid-area: a4;
+    background-color: gray;
+}
+/*.header{
+    grid-area: he;
+    background-color: lightgray;
+    text-align: center;
+    
+}*/
+.footer {
+    grid-area: fo;
+    background-color: darkcyan;
+}
+nav {
+    grid-area: he;
     width:100%;
+    margin:auto;
     display: flex;
     justify-content: flex-end;
     align-content: center;
     /*height: 10vh;*/
-    background-color: lightgray;
+    background-color: darkcyan;
     font-family: sans-serif;
+    
+}
+
+#rubrik {
+ /*   margin-right:auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;*/
+    margin: auto;
+    padding-left: -5%;
+    -webkit-text-stroke: 1px black;
+    width:400px;
+    display: block;
+    color: white;
+    font-family: 'Oi', cursive;
+    font-size: 50px;
+}
+
+.nav div {
+    display: flex;
 }
 .article1 {
     grid-area: a1;
@@ -59,26 +101,21 @@
     
 }
 .burger{
-    width:300px;
+    /*width:300px;*/
+   margin-right:10px;
+   position: absolute;
+   top:10px;
+   right:10px;
     display: block;
     cursor: pointer;
-    /*position: absolute;*/
+    
     /*right: 50px;*/
     
     /*top: 60px;*/
+    
+  
 }
-h1 {
-    width:400px;
-    display: block;
-    color: black;
-    font-family: sans-serif;
-    font-size: 50px;
-    /*margin:auto;
-    padding-top: 1.5%;*/
-    /*justify-content: center;*/
-    margin: 0%;
-   
-}
+
 
 .navLinks {
     display: flex;
@@ -87,8 +124,8 @@ h1 {
     position: absolute;
     right: 0px;
     height: 70vh;
-    top: -90vh;
-    background-color: lightgray;
+    top: -82vh;
+    background-color: darkcyan;
     align-items: center;
     width: 20%;
     transition: all 1s;
@@ -135,22 +172,21 @@ h1 {
     .navLinks {
         width: 40%;
         height: 70vh;
+        top: -91vh;
     }
 }
-nav {
-    Height: 15vh;
+/*nav {
+    eight: 15vh;
 
 
-}
+}*/
 
 
 @media screen and (min-width:700px) {
-    nav {
+   /* nav {
         height: 15vh;
         
-
-
-    }
+    }*/
     .burger div{
         width: 50px;
         height: 6px;
