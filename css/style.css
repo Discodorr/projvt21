@@ -200,14 +200,18 @@ p {
 }
 
 @media screen and (max-width:700px) {
+
+    h1 {
+        font-size: 40px;
+    }
     .navLinks a{
         letter-spacing: 1px;
         font-size: 19px;
     }
     .navLinks {
-        width: 40%;
+        width: 30%;
         height: 70vh;
-        top: -91vh;
+        top: -93vh;
     }
 }
 /*nav {
