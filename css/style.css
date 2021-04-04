@@ -22,38 +22,125 @@
     ;
 
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 2fr 1fr;
 
-    grid-gap: 1px;
+    grid-gap: 0;
 
+}
+.article1 {
+    grid-area: a1;
+    background-color: black;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: white;
+    
+
+}
+
+.article1c {
+    grid-area: a1;
+    background-color: black;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.contact-info {
+    display:flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 20px;
+}
+.card {
+    background-color: skyblue;
+    padding: 20px;
+    margin: 30px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card p{
+    margin-top:20px ;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+}
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+
+.card-icon {
+    font-size: 28px;
+    background: rgb(199, 67, 67);
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+.card:hover .card-icon {
+    background: none;
+    color: rgb(199, 67, 67);
+    transform: scale(1.6);
 }
 a {
     color: Black;
     list-style: none;
     text-decoration: none;
   }
+  body {
+      background-color: rgb(82, 120, 163);
+  }
+  h2 {
+      text-align: center;
+      padding-top: 15px;
+      font-family: 'Righteous', cursive;
+  }
+ p {
+    font-family: 'Righteous', cursive;
+ }
 
   a:hover {
     color: rgb(48, 47, 47);
   }
+
+  img {
+      width: 500px;
+      height: 280px;
+      background-color: white;
+  }
+  .img3 {
+      width: 100%;
+      height: 100%;
+  }
+  .img4{
+      width: 100%;
+      height: 100%;
+  }
   
-.article1 {
-    grid-area: a1;
-    background-color: whitesmoke;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    padding: 0;
-    
-}
-.aside {
-    grid-area: as;
-    background-color: whitesmoke;
-}
+
 
 .article2 {
     grid-area: a2;
-    background-color: whitesmoke;
+    background-color: black;
     font-family: 'Fira Sans Condensed', sans-serif;
     font-size: 20px;
+    color: white;
+    
 }
 .article3 {
     grid-area: a3;
@@ -62,18 +149,14 @@ a {
 }
 .article4 {
     grid-area: a4;
-    background-color: whitesmoke;
+    background-color: black;
+    color: white;
     font-family: 'Fira Sans Condensed', sans-serif;
 }
-/*.header{
-    grid-area: he;
-    background-color: lightgray;
-    text-align: center;
-    
-}*/
+
 .footer {
     grid-area: fo;
-    background-color: rgb(88, 196, 133);
+    background-color: rgb(82, 120, 163);
     text-align: center;
     padding-top: 2%;
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -86,16 +169,19 @@ nav {
     justify-content: flex-end;
     align-content: center;
     /*height: 10vh;*/
-    background-color: rgb(88, 196, 133);
+    background-color: rgb(82, 120, 163);
     font-family: sans-serif;
     text-align: center;
+    position:sticky;
+    top: 0;
+    opacity: 90%;
     
 }
 
 #rubrik {
 
     margin: auto;
-    padding-left: -15%;
+    padding-left: -5%;
    /* -webkit-text-stroke: 0.5px black; */
     width:400px;
     display: block;
@@ -113,18 +199,40 @@ nav {
 }
 .article2 {
     grid-area: a2;
+    text-align: center;
     
+}
+h1 {
+    text-align: center;
+    padding-top: 30px;
 }
 p {
     padding: 2%;
+    text-align: center;
 }
 .article3 {
     grid-area: a3;
+  
+    background-color: black;
+    
     
 }
 .article4 {
     grid-area: a4;
+    font-family: 'Righteous', cursive;
     
+    
+}
+.img2 {
+    height: 280px;
+    width: 400px;
+    margin: 0%;
+    
+
+}
+.img5 {
+    width: 100%;
+    height: 50%;
 }
 .burger{
     /*width:300px;*/
@@ -151,9 +259,9 @@ p {
     right: 0px;
     height: 60vh;
     top: -85vh;
-    background-color: rgb(88, 196, 133);
+    background-color: rgb(82, 120, 163);
     align-items: center;
-    width: 10%;
+    width: 5%;
     transition: all 1s;
     font-family: 'Righteous', cursive;
 }
@@ -163,7 +271,7 @@ p {
 .navLinks a{
     color: black;
     /*text-decoration: none;*/
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     font-weight: bold;
     font-size: 25px;
 }
@@ -197,6 +305,18 @@ p {
 
 .navActive {
     transform: translateY(100vh);
+}
+
+@media screen and (max-width:900px){
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
 }
 
 @media screen and (max-width:700px) {
